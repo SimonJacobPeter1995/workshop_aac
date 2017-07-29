@@ -5,6 +5,7 @@ myApp.controller('BooksController', ['$scope', '$http', '$location', '$routePara
 
 	$scope.getBooks = function(){
 		$http.get('/api/books').success(function(response){
+			console.log(response)
 			$scope.books = response;
 		});
 	}
